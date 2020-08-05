@@ -29,7 +29,7 @@ namespace CalendarBot
 
             //  You can assign your bot token to a string, and pass that in to connect.
             //  This is, however, insecure, particularly if you plan to have your code hosted in a public repository.
-            var token = "NzQwNjYxNjAwMTg4NDk4MTAx.XysQ3g.n6WpbsHdNtk0ZjpON9i1q3P_2b8";
+            var token = "NzQwNjYxNjAwMTg4NDk4MTAx.XysQ3g.GX7_U6pYzDq3u1UVkTCqv5LXtq";
 
             // Some alternative options would be to keep your token in an Environment Variable or a standalone file.
             // var token = Environment.GetEnvironmentVariable("NameOfYourEnvironmentVariable");
