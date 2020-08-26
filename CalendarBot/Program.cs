@@ -26,7 +26,7 @@ namespace CalendarBot
 
             client.Log += Log;
 
-            var token = "NzQwNjYxNjAwMTg4NDk4MTAx.XysQ3g.GX7_U6pYzDq3u1UVkTCqv5LXtq0";
+            var token = "NzQwNjYxNjAwMTg4NDk4MTAx.XysQ3g.5mk4KZEzX5dESJEjqFAsGwVLvd8";
 
             await client.LoginAsync(TokenType.Bot, token);
             await client.StartAsync();

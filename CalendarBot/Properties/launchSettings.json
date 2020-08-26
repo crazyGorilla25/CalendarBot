@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CalendarBot": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "CalendarBotToken": "NzQwNjYxNjAwMTg4NDk4MTAx.XysQ3g.5mk4KZEzX5dESJEjqFAsGwVLvd8"
+      }
+    }
+  }
+}
