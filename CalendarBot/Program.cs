@@ -44,7 +44,7 @@ namespace CalendarBot
             Console.WriteLine("Announcing events");
             DateTime now = DateTime.Now;
             DateTime timeToRun = new DateTime(now.Year, now.Month, now.Day, 8, 0, 0);
-            //DateTime timeToRun = now.AddSeconds(10);
+            //DateTime timeToRun = now.AddSeconds(5);
             TimeSpan delay;
             if(timeToRun > now)
             {
@@ -66,11 +66,12 @@ namespace CalendarBot
             Console.WriteLine(DateTime.Today);
             for (int i = 0; i < pHSCalendar.Events.Count; i++)
             {
+
                 CalendarEvent eventInQuestion = pHSCalendar.Events[i];
-                if ((eventInQuestion.Start.Date <= DateTime.Today && DateTime.Today < eventInQuestion.End.Date) || eventInQuestion.Start.Date == DateTime.Today)
+                Console.WriteLine(eventInQuestion.Summary + " Start: " + eventInQuestion.Start.Date + " End: " + eventInQuestion.End.Date);
+                if ((eventInQuestion.Start.Date <= DateTime.Today && DateTime.Today < eventInQuestion.End.Date) || eventInQuestion.Start.Date == DateTime.Today.Date)
                 {
                     todayEvents.Add(eventInQuestion);
-                    Console.WriteLine(eventInQuestion.Summary + " Start: " + eventInQuestion.Start.Date + " End: "  + eventInQuestion.End.Date);
                 }
             }
 
@@ -79,6 +80,7 @@ namespace CalendarBot
 
             SocketRole role = server.GetRole(740738668255379546);
             string announcementMessage = role.Mention + "\nToday's events are:\n";
+            Console.WriteLine(todayEvents.Count);
             if (todayEvents.Count == 0)
             {
                 announcementMessage = role.Mention + "\nThere are no events listed today.";
